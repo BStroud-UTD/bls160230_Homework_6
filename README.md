@@ -1,2 +1,7 @@
 # bls160230_Homework_6
-Demonstrate binary file I/O with CDK visualization.
+
+Name:  Blake Stroud
+NetID: bls160230
+email: bls160230@utdallas.edu
+
+Github URL: https://github.com/BStroud-UTD/bls160230_Homework_6
