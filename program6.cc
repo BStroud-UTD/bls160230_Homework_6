@@ -8,7 +8,7 @@
 #define MATRIX_WIDTH 3
 #define MATRIX_HEIGHT 5
 #define BOX_WIDTH 25
-#define MATRIX_NAME_STRING "Test Matrix"
+#define MATRIX_NAME_STRING "Binary File Contents"
 
 using namespace std;
 
@@ -23,7 +23,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-  char data[11][26] = {"a"};    // Used to hold the data read in from binary file 
+  // char data[11][26] = {"a"};    // Used to hold the data read in from binary file 
 
   WINDOW *window;
   CDKSCREEN *cdkscreen;
@@ -57,10 +57,10 @@ int main(int argc, char *argv[])
   drawCDKMatrix(myMatrix, true);
 
   // Send the array to read in the values from the binary file
-  file(data);
+  file(myMatrix);
 
   // Send the data to be printed in the matrix
-  matrix(data, myMatrix);
+  //matrix(data, myMatrix);
 
   // Stall program to display finished matrix
   unsigned char x;
