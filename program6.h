@@ -4,9 +4,31 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <stdint.h>
 #include "cdk.h"
+#include <stdio.h>
 
-void file(char data[][26]);
-void matrix(char data[][26], CDKMATRIX *myMatrix);
+const int maxRecordStringLength = 25;
+
+class BinaryFileHeader {
+ public: 
+
+  uint32_t magicNumber;
+  uint32_t versionNumber;
+  uint64_t numRecords;
+};
+
+class BinaryFileRecord {
+ public:
+
+  uint8_t strLength;
+  char stringBuffer[maxRecordStringLength];
+};
+
+
+void file(CDKMATRIX *myMatrix);
+void matrix(BinaryFileHeader *head, BinaryFileRecord *rec1, 
+	    BinaryFileRecord *rec2, BinaryFileRecord *rec3, 
+	    BinaryFileRecord *rec4, CDKMATRIX *myMatrix);
 
 #endif /* _PROGRAM6_H_ */
