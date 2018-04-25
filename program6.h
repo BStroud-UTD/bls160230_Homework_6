@@ -2,7 +2,6 @@
 #define _PROGRAM6_H_
 
 #include <iostream>
-#include <string>
 #include <fstream>
 #include <stdint.h>
 #include "cdk.h"

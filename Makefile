@@ -1,6 +1,7 @@
-# Name:  Blake Stroud
-# NetID: bls160230
-# Email: bls160230@utdallas.edu
+# Name:   Blake Stroud
+# NetID:  bls160230
+# Email:  bls160230@utdallas.edu
+# Course: cs3377.501
 
 CXX = g++
 CXXFLAGS = -Wall -g

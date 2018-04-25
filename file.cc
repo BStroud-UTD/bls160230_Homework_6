@@ -1,6 +1,7 @@
-// Name:  Blake Stroud
-// NetID: bls160230
-// Email: bls160230@utdallas.edu
+// Name:   Blake Stroud
+// NetID:  bls160230
+// Email:  bls160230@utdallas.edu
+// Course: cs3377.501
 
 #include <iostream>
 #include "program6.h"
@@ -18,12 +19,14 @@ void file(CDKMATRIX *myMatrix)
 
   // Read in the header
   binInFile.read((char *) myHeader, sizeof(BinaryFileHeader));
-
+  
+  // Read in the records
   binInFile.read((char *) myRecord1, sizeof(BinaryFileRecord));
   binInFile.read((char *) myRecord2, sizeof(BinaryFileRecord));
   binInFile.read((char *) myRecord3, sizeof(BinaryFileRecord));
   binInFile.read((char *) myRecord4, sizeof(BinaryFileRecord));
 
+  // Send header, records, and Matrix to matrix function to be displayed
   matrix(myHeader, myRecord1, myRecord2, myRecord3, myRecord4, myMatrix);
 
 }

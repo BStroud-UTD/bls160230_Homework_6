@@ -1,6 +1,7 @@
-// Name:  Blake Stroud
-// NetID: bls160230
-// Email: bls160230@utdallas.edu
+// Name:   Blake Stroud
+// NetID:  bls160230
+// Email:  bls160230@utdallas.edu
+// Course: cs3377.501
 
 #include <iostream>
 #include "program6.h"
@@ -23,8 +24,6 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-  // char data[11][26] = {"a"};    // Used to hold the data read in from binary file 
-
   WINDOW *window;
   CDKSCREEN *cdkscreen;
   CDKMATRIX *myMatrix;
@@ -48,6 +47,7 @@ int main(int argc, char *argv[])
 			  (char**) rowTitles, (char**) columnTitles, boxWidths,
 			  boxTypes, 1, 1, ' ', ROW, true, true, false);
 
+  // Test if matrix was created
   if (myMatrix == NULL) {
     printf("Error creating matrix.\n");
     _exit(1);
@@ -57,10 +57,9 @@ int main(int argc, char *argv[])
   drawCDKMatrix(myMatrix, true);
 
   // Send the array to read in the values from the binary file
+  // Data from file gets sent immediately to matrix() function where
+  // the data gets displayed
   file(myMatrix);
-
-  // Send the data to be printed in the matrix
-  //matrix(data, myMatrix);
 
   // Stall program to display finished matrix
   unsigned char x;
